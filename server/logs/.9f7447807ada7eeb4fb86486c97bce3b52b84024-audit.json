@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "D:\\My Work\\Web Developnment\\ThoughtNest\\server\\logs\\.9f7447807ada7eeb4fb86486c97bce3b52b84024-audit.json",
+    "files": [
+        {
+            "date": 1722800342521,
+            "name": "D:\\My Work\\Web Developnment\\ThoughtNest\\server\\logs\\log-2024-08-05.log",
+            "hash": "e21c2e6205c3fc48d38b4fb1c8c19b6c834e3f5ac57225ccce3ec62e4120ae34"
+        },
+        {
+            "date": 1722937518228,
+            "name": "D:\\My Work\\Web Developnment\\ThoughtNest\\server\\logs\\log-2024-08-06.log",
+            "hash": "b352dace0fe8d1d233a9cf8e3dba927f35e71c1e71cafaf9c82fe0d2ee8cf4f1"
+        },
+        {
+            "date": 1723007961125,
+            "name": "D:\\My Work\\Web Developnment\\ThoughtNest\\server\\logs\\log-2024-08-07.log",
+            "hash": "1683afcbcdb002f548468098ff0204bba781b6e42dd7f3e3dd6f4f6ca27fdace"
+        }
+    ],
+    "hashType": "sha256"
+}

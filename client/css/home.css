@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.navbar {
+  background-image: linear-gradient(
+    -225deg,
+    #22e1ff 0%,
+    #1d8fe1 48%,
+    #625eb1 100%
+  );
+}
+.navbar-brand:hover {
+  color: rgb(204, 200, 200);
+}
+.form-control {
+  line-height: 2.5;
+}
+.formSearch {
+  justify-content: center;
+}
+.form-control:hover {
+  filter: drop-shadow(2px 4px 6px#0C6EFD);
+}
+
+.Fields {
+  width: 100%;
+}
+.form-select {
+  line-height: 2.5;
+}
+textarea.form-control {
+  min-height: calc(24.5em + 0.75rem + calc(var(--bs-border-width) * 2));
+}
+.publishBtn {
+  float: inline-end;
+}
+/* Add this to your CSS file */
+.border-danger {
+  border: 1px solid red;
+}
+#blogBody {
+  display: contents;
+}
+.gradient-text {
+  font-size: 6.5rem;
+  font-family: fantasy;
+  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 56%, #ffbac3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
