@@ -1,0 +1,24 @@
+[2024-08-07 11:48:38.173 PM] [SchoolMIS] ERROR: SomeThing Went Wrong That is UnhandledENOENT: no such file or directory, open 'D:\My Work\Web Developnment\ThoughtNest\server\uploads\1723056518159.jpg'Error: ENOENT: no such file or directory, open 'D:\My Work\Web Developnment\ThoughtNest\server\uploads\1723056518159.jpg'
+[2024-08-07 11:50:25.409 PM] [SchoolMIS] ERROR: SomeThing Went Wrong That is UnhandledUnexpected fieldMulterError: Unexpected field
+    at wrappedFileFilter (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\multer\lib\make-middleware.js:115:7)
+    at Busboy.emit (node:events:518:28)
+    at Busboy.emit (node:domain:488:12)
+    at Busboy.emit (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (node:events:518:28)
+    at PartStream.emit (node:domain:488:12)
+    at HeaderParser.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (node:events:518:28)
+[2024-08-07 11:55:04.729 PM] [SchoolMIS] ERROR: SomeThing Went Wrong That is UnhandledENOENT: no such file or directory, open 'D:\My Work\Web Developnment\ThoughtNest\server\src\routes\server\uploads\1723056904710.jpg'Error: ENOENT: no such file or directory, open 'D:\My Work\Web Developnment\ThoughtNest\server\src\routes\server\uploads\1723056904710.jpg'
+[2024-08-07 11:56:53.228 PM] [SchoolMIS] ERROR: SomeThing Went Wrong That is UnhandledUnexpected fieldMulterError: Unexpected field
+    at wrappedFileFilter (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\multer\index.js:40:19)
+    at Busboy.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\multer\lib\make-middleware.js:115:7)
+    at Busboy.emit (node:events:518:28)
+    at Busboy.emit (node:domain:488:12)
+    at Busboy.emit (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\busboy\lib\main.js:38:33)
+    at PartStream.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\busboy\lib\types\multipart.js:213:13)
+    at PartStream.emit (node:events:518:28)
+    at PartStream.emit (node:domain:488:12)
+    at HeaderParser.<anonymous> (D:\My Work\Web Developnment\ThoughtNest\server\node_modules\dicer\lib\Dicer.js:51:16)
+    at HeaderParser.emit (node:events:518:28)

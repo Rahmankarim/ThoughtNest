@@ -6,4 +6,5 @@ export const blogRequestValidator = Joi.object().keys({
     gender: Joi.string(),
     title: Joi.string(),
     body: Joi.string(),
+    coverImagePath: Joi.string()
 });

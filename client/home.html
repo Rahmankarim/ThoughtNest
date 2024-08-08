@@ -11,12 +11,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/home.css" />
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar">
       <div class="container-fluid mt-3 mb-3">
-        <a class="navbar-brand ms-3" href="./home.html">ThoughtNest</a>
+        <a class="navbar-brand ms-3 ThoughtNest">ThoughtNest</a>
         <div class="d-flex">
           <button
             class="btn btn-outline-light me-3 p-2 writePost"
@@ -30,56 +37,519 @@
           >
             Login / SignUp
           </button>
-          <h2 class="profileName"></h2>
+          <button
+            class="btn btn-outline-light me-3 p-2 profileName"
+            type="button"
+          ></button>
         </div>
       </div>
     </nav>
+    <section class="Home-Pageclass">
+      <!-- search bar -->
+      <section>
+        <div class="container">
+          <form class="d-flex mt-5 formSearch" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary me-3" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </section>
 
-    <!-- search bar -->
-    <section>
-      <div class="container">
-        <form class="d-flex mt-5 formSearch" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-primary me-3" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
+      <!-- recent Posts -->
+
+      <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1 style="color: #1f96e4">Recent Blogs</h1>
+            </div>
+            <div class="col-12">
+              <div class="row" id="blog-Body"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="dark">
+        <div class="container py-4">
+          <h1 class="h1 text-center" id="pageHeaderTitle">Publications</h1>
+
+          <article class="postcard dark blue">
+            <a class="postcard__img_link" href="#">
+              <img
+                class="postcard__img"
+                src="https://picsum.photos/1000/1000"
+                alt="Image Title"
+              />
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title blue">
+                <a href="#">Podcast Title</a>
+              </h1>
+              <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                  <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                </time>
+              </div>
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, fugiat asperiores inventore beatae accusamus odit
+                minima enim, commodi quia, doloribus eius! Ducimus nemo
+                accusantium maiores velit corrupti tempora reiciendis molestiae
+                repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt
+                neque nulla unde ipsum dolores nobis enim quidem excepturi,
+                illum quos!
+              </div>
+              <ul class="postcard__tagbox">
+                <li class="tag__item">
+                  <i class="fas fa-tag mr-2"></i>Podcast
+                </li>
+                <li class="tag__item">
+                  <i class="fas fa-clock mr-2"></i>55 mins.
+                </li>
+                <li class="tag__item play blue">
+                  <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="postcard dark red">
+            <a class="postcard__img_link" href="#">
+              <img
+                class="postcard__img"
+                src="https://picsum.photos/501/500"
+                alt="Image Title"
+              />
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+              <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                  <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                </time>
+              </div>
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, fugiat asperiores inventore beatae accusamus odit
+                minima enim, commodi quia, doloribus eius! Ducimus nemo
+                accusantium maiores velit corrupti tempora reiciendis molestiae
+                repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt
+                neque nulla unde ipsum dolores nobis enim quidem excepturi,
+                illum quos!
+              </div>
+              <ul class="postcard__tagbox">
+                <li class="tag__item">
+                  <i class="fas fa-tag mr-2"></i>Podcast
+                </li>
+                <li class="tag__item">
+                  <i class="fas fa-clock mr-2"></i>55 mins.
+                </li>
+                <li class="tag__item play red">
+                  <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="postcard dark green">
+            <a class="postcard__img_link" href="#">
+              <img
+                class="postcard__img"
+                src="https://picsum.photos/500/501"
+                alt="Image Title"
+              />
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title green">
+                <a href="#">Podcast Title</a>
+              </h1>
+              <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                  <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                </time>
+              </div>
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, fugiat asperiores inventore beatae accusamus odit
+                minima enim, commodi quia, doloribus eius! Ducimus nemo
+                accusantium maiores velit corrupti tempora reiciendis molestiae
+                repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt
+                neque nulla unde ipsum dolores nobis enim quidem excepturi,
+                illum quos!
+              </div>
+              <ul class="postcard__tagbox">
+                <li class="tag__item">
+                  <i class="fas fa-tag mr-2"></i>Podcast
+                </li>
+                <li class="tag__item">
+                  <i class="fas fa-clock mr-2"></i>55 mins.
+                </li>
+                <li class="tag__item play green">
+                  <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="postcard dark yellow">
+            <a class="postcard__img_link" href="#">
+              <img
+                class="postcard__img"
+                src="https://picsum.photos/501/501"
+                alt="Image Title"
+              />
+            </a>
+            <div class="postcard__text">
+              <h1 class="postcard__title yellow">
+                <a href="#">Podcast Title</a>
+              </h1>
+              <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                  <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                </time>
+              </div>
+              <div class="postcard__bar"></div>
+              <div class="postcard__preview-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, fugiat asperiores inventore beatae accusamus odit
+                minima enim, commodi quia, doloribus eius! Ducimus nemo
+                accusantium maiores velit corrupti tempora reiciendis molestiae
+                repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt
+                neque nulla unde ipsum dolores nobis enim quidem excepturi,
+                illum quos!
+              </div>
+              <ul class="postcard__tagbox">
+                <li class="tag__item">
+                  <i class="fas fa-tag mr-2"></i>Podcast
+                </li>
+                <li class="tag__item">
+                  <i class="fas fa-clock mr-2"></i>55 mins.
+                </li>
+                <li class="tag__item play yellow">
+                  <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section> -->
     </section>
+    <section class="write-Blogclass">
+      <!-- Write your idea and name and other input fields -->
+      <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <h1>Write down your Idea:</h1>
+            </div>
+            <div class="col-lg-12 mt-5">
+              <form
+                id="ideaForm"
+                method="post"
+                class="dataInputRow row gy-2 gx-3 align-items-center"
+                enctype="multipart/form-data"
+              >
+                <div class="col-auto">
+                  <label class="visually-hidden" for="autoSizingInput"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control Fields"
+                    id="nameInput"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="autoSizingInputGroup"
+                    >Email</label
+                  >
+                  <div class="input-group">
+                    <div class="input-group-text">@</div>
+                    <input
+                      type="text"
+                      class="form-control Fields"
+                      id="emailInput"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="autoSizingSelect"
+                    >Preference</label
+                  >
+                  <select class="form-select Fields" id="preferenceSelect">
+                    <option selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <!-- Cover Image input fields -->
+                <div class="col-auto">
+                  <input
+                    class="form-control"
+                    type="file"
+                    id="coverImage"
+                    name="coverImagename"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- recent Posts -->
-
-    <section>
-      <div class="container mt-5">
+      <!-- blog title and body field -->
+      <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12">
+              <input
+                type="text"
+                class="form-control Fields"
+                id="titleInput"
+                placeholder="Enter Title Here"
+              />
+            </div>
+            <div class="col-12">
+              <textarea
+                class="form-control mt-3 Fields"
+                aria-label="With textarea"
+                id="bodyInput"
+                placeholder="Write Body here"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <button
+                class="btn btn-outline-primary mt-3 p-3 rounded publishBtn"
+                type="button"
+              >
+                Publish
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="preview-Blogclass">
+      <!-- preview Blog: -->
+      <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h1>Recent Posts:</h1>
+          <div class="col-12 mt-5 mb-5">
+            <h1 class="text-center gradient-text" id="blogTitle"></h1>
+            <br /><br />
+            <div class="text-center">
+              <img
+                src="../server/uploads/draw2.webp"
+                alt="Image is Corrupted"
+                class="img-fluid"
+                id="previewBlogImage"
+              />
+            </div>
+            <br /><br />
+            <p
+              class="text-center mt-5"
+              id="blogBody"
+              style="font-size: 2rem; font-family: fangsong"
+            ></p>
+            <h3 class="mt-5" id="blogAuthor"></h3>
+            <h4 id="blogAuthorEmail"></h4>
           </div>
         </div>
       </div>
     </section>
+    <section class="login-signup">
+      <section class="vh-100">
+        <div class="container h-custom">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img
+                src="./images/draw2.webp"
+                class="img-fluid"
+                alt="Sample image"
+              />
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form>
+                <div
+                  class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
+                >
+                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
 
-    <!-- table -->
-    <section>
-      <div class="container mt-3">
-        <table class="table table-striped table-hover mt-5 text-center">
-          <thead></thead>
-          <tbody id="blog-Body"></tbody>
-        </table>
-      </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </button>
+                </div>
+
+                <div class="divider d-flex align-items-center my-4">
+                  <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                </div>
+
+                <!-- name input -->
+                <div class="form-outline mb-4 newAccount">
+                  <input
+                    type="text"
+                    id="form3Example3"
+                    class="form-control form-control-lg nameInput"
+                    placeholder="Enter your Full Name"
+                    required
+                  />
+                </div>
+
+                <!-- Phone Number input -->
+                <div class="form-outline mb-3 newAccount">
+                  <input
+                    type="number"
+                    id="form3Example4"
+                    class="form-control form-control-lg phoneNumberInput"
+                    placeholder="Enter Phone Number"
+                    required
+                  />
+                </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="form3Example5 "
+                    class="form-control form-control-lg emailInput"
+                    placeholder="Enter a valid email address"
+                    required
+                  />
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                  <input
+                    type="password"
+                    id="form3Example6 "
+                    class="form-control form-control-lg passwordInput"
+                    placeholder="Enter password"
+                    required
+                  />
+                </div>
+                <!--confirm  Password input -->
+                <div class="form-outline mb-3 newAccount">
+                  <input
+                    type="password"
+                    id="form3Example7"
+                    class="form-control form-control-lg confirmPasswordInput"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- Checkbox -->
+                  <div class="form-check mb-0">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value=""
+                      id="form2Example3"
+                    />
+                    <label class="form-check-label" for="form2Example3">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="#!" class="text-body forgetPassword"
+                    >Forgot password?</a
+                  >
+                </div>
+
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg signinBtn"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem"
+                  >
+                    SignIn
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg signupBtn"
+                    style="
+                      padding-left: 2.5rem;
+                      padding-right: 2.5rem;
+                      display: none;
+                    "
+                  >
+                    SignUP
+                  </button>
+                  <p class="small fw-bold mt-2 pt-1 mb-0 dontHaveAccountText">
+                    Don't have an account?
+                    <a href="#!" class="link-danger register">Register</a>
+                  </p>
+                  <p
+                    class="small fw-bold mt-2 pt-1 mb-0 alreadyHaveAccountText"
+                  >
+                    Already have an account..
+                    <a href="#!" class="link-danger signINText">SignIn</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 footer"
+        >
+          <!-- Copyright -->
+          <div class="text-white mb-3 mb-md-0">
+            Copyright © 2020. All rights reserved.
+          </div>
+          <!-- Copyright -->
+
+          <!-- Right -->
+          <div>
+            <a href="#!" class="text-white me-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#!" class="text-white me-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#!" class="text-white me-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#!" class="text-white">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </div>
+      </section>
     </section>
 
     <!-- links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/home.js"></script>
-    <script src="./js/login.js"></script>
   </body>
 </html>
