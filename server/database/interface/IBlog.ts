@@ -4,5 +4,6 @@ export interface IBlog
     email: string,
     gender: string,
     title: string,
-    body: string
+    body: string,
+    coverImagePath: string,
 }

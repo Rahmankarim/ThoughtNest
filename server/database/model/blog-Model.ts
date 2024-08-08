@@ -7,7 +7,8 @@ interface blogDoc extends mongoose.Document
     email: string,
     gender: string,
     title: string,
-    body: string
+    body: string,
+    coverImagePath: string,
 }
 
 interface IBlogModel extends mongoose.Model<blogDoc>
@@ -37,6 +38,12 @@ const blogSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    coverImagePath:
+    {
+        type: String,
+        require: false
+    },
+    
 });
 
 blogSchema.statics.build = (attr: IBlog) =>

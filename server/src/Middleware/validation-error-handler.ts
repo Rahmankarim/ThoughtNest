@@ -17,7 +17,7 @@ const validateRequest = (path: TypeOfKeys<typeof requestValidators>, useJoiError
     const requestValidations = requestValidators[path];
 
     if (!requestValidations) {
-        throw new Error(`Request validators not found in the path: ${path}`);
+        throw new Error(`Request validators not found for the path: ${path}`);
     }
 
     return (req, res, next) => {
@@ -30,20 +30,18 @@ const validateRequest = (path: TypeOfKeys<typeof requestValidators>, useJoiError
         const { error, value } = requestValidations.validate(req.body, validationOptions);
 
         if (error) {
-            const customError: CustomError = new CustomError("Invalid request. Please review request and try again.", statusCodes.BadRequest)
-            const joiError: CustomError = new CustomError("Validation", 
-                statusCodes.ValidationError, 
-                error.details.map(({ message, type }) => (
-                    { 
-                        [type]: message.replace(/['"]/g, "") 
-                    })));
-            return res.status(statusCodes.ValidationError).json(useJoiError ? joiError : customError);
+            const customError = new CustomError(
+                "Invalid request. Please review and try again.",
+                statusCodes.BadRequest,
+                error.details.map(({ message, type }) => ({ [type]: message.replace(/['"]/g, "") }))
+            );
+            return res.status(statusCodes.ValidationError).json(useJoiError ? customError : customError);
         }
 
-        // validation successful
         req.body = value;
         return next();
     };
 };
+
 
 export default validateRequest;

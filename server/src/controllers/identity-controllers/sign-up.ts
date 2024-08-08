@@ -46,4 +46,4 @@ const createUser = async (req: Request, res: Response) => {
   }
 };
 
-module.exports = createUser;
+ export {createUser};
